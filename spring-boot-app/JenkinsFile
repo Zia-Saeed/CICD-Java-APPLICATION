@@ -11,13 +11,6 @@ pipeline {
         DOCKER_IMAGE = "ziasaeeditgeek/django-cicd-project"
     }
     stages {
-        stage('Build') {
-            steps {
-                dir('django-cicd-project') {
-                    git branch: "main", url: "https://github.com/Zia-Saeed/Django-CICD-PROJECT"
-                }
-            }
-        }
         stage('Debug Workspace') {
             steps {
                 sh 'ls -la' // Debug workspace contents
